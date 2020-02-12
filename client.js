@@ -16,11 +16,12 @@ const connect = function() {
   });
 
   conn.on("connect", () => {
-    // conn.write(
-    //   "Hello from client, the game server has successfully been connected!"
-    // );
     console.log("Successfully connected to game server!");
     conn.write("Name: DXH");
+  });
+
+  conn.on("connect", () => {
+    conn.write("Say: This is my snake! Lets go!");
   });
 
   // conn.on("connect", () => {
