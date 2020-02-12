@@ -26,6 +26,30 @@ const connect = function() {
     conn.write("Name: DXH");
   });
 
+  conn.on("connect", () => {
+    setInterval(() => {
+      conn.write("Move: up"); //Move: up message to the server.
+    }, 1000);
+  });
+
+  conn.on("connect", () => {
+    setInterval(() => {
+      conn.write("Move: down"); //Move: down message to the server.
+    }, 1000);
+  });
+
+  conn.on("connect", () => {
+    setInterval(() => {
+      conn.write("Move: left"); //Move: left message to the server.
+    }, 1000);
+  });
+
+  conn.on("connect", () => {
+    setInterval(() => {
+      conn.write("Move: right"); //Move: right message to the server.
+    }, 1000);
+  });
+
   return conn;
 };
 
