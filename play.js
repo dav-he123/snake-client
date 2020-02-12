@@ -11,8 +11,8 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on("data", () => {
-    console.log("You ded cuz you idled, it's got a sharp tongue, this server!");
+  conn.on("data", data => {
+    console.log(data);
   });
 
   return conn;
